@@ -177,6 +177,25 @@
     border-bottom-style: solid;
 }
 
+.link_style_btn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: #79a29a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px dashed #79a29a;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.link_style_btn:hover {
+    color: #5d8b82;
+    border-bottom-style: solid;
+}
+
 .cart_right_exact {
     display: flex;
     flex-direction: column;

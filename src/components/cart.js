@@ -1,12 +1,9 @@
-import React, { useState } from "react";
 import "./style.css";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
-import Rating from "@mui/material/Rating";
 
 function Cart({ cartItem, setcartItem }) {
     const navigate = useNavigate();
-    const [value, setValue] = useState(3);
 
     // Calculations
     const subtotal = cartItem.reduce((acc, item) => acc + item.price * (item.qty || 1), 0);
@@ -36,12 +33,6 @@ function Cart({ cartItem, setcartItem }) {
         setcartItem(updatedCart);
     };
 
-    // Function to clear all items
-    const handleClearCart = () => {
-        if (window.confirm("Are you sure you want to clear your cart?")) {
-            setcartItem([]);
-        }
-    };
 
     return (
         <div className="cart-container">
@@ -87,7 +78,7 @@ function Cart({ cartItem, setcartItem }) {
                                                 <p className="exact_stock_status">In Stock and ready to ship!</p>
 
                                                 <div className="item_bottom_links">
-                                                    <a href="#" onClick={(e) => e.preventDefault()}>Add a Gift Bag ($9.99 ea)</a>
+                                                    <button className="link_style_btn">Add a Gift Bag ($9.99 ea)</button>
                                                 </div>
                                             </div>
 
@@ -111,7 +102,7 @@ function Cart({ cartItem, setcartItem }) {
                                                 </div>
 
                                                 <div className="item_bottom_links right_links">
-                                                    <a href="#" onClick={(e) => e.preventDefault()}>Add a Personalized Card ($5.00)</a>
+                                                    <button className="link_style_btn">Add a Personalized Card ($5.00)</button>
                                                 </div>
                                             </div>
                                         </div>
