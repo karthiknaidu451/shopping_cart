@@ -87,7 +87,7 @@ function Cart({ cartItem, setcartItem }) {
                                                 <p className="exact_stock_status">In Stock and ready to ship!</p>
 
                                                 <div className="item_bottom_links">
-                                                    <a href="#" onClick={(e) => e.preventDefault()}>Add a Gift Bag ($9.99 ea)</a>
+                                                    <button className="link_style_btn">Add a Gift Bag ($9.99 ea)</button>
                                                 </div>
                                             </div>
 
@@ -111,7 +111,7 @@ function Cart({ cartItem, setcartItem }) {
                                                 </div>
 
                                                 <div className="item_bottom_links right_links">
-                                                    <a href="#" onClick={(e) => e.preventDefault()}>Add a Personalized Card ($5.00)</a>
+                                                    <button className="link_style_btn">Add a Personalized Card ($5.00)</button>
                                                 </div>
                                             </div>
                                         </div>
