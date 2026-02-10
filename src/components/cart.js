@@ -1,12 +1,9 @@
-import React, { useState } from "react";
 import "./style.css";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
-import Rating from "@mui/material/Rating";
 
 function Cart({ cartItem, setcartItem }) {
     const navigate = useNavigate();
-    const [value, setValue] = useState(3);
 
     // Calculations
     const subtotal = cartItem.reduce((acc, item) => acc + item.price * (item.qty || 1), 0);
@@ -36,12 +33,6 @@ function Cart({ cartItem, setcartItem }) {
         setcartItem(updatedCart);
     };
 
-    // Function to clear all items
-    const handleClearCart = () => {
-        if (window.confirm("Are you sure you want to clear your cart?")) {
-            setcartItem([]);
-        }
-    };
 
     return (
         <div className="cart-container">
